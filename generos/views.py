@@ -4,15 +4,16 @@ from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import get_object_or_404
 # importações do DRF = Django Rest Framework
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
-from .models import GeneroModel, AtorModel
-from .serializers import GeneroModelSerializer, AtorModelSerializer
+from .models import GeneroModel
+from .serializers import GeneroModelSerializer
 # Create your views here.
 
 
 
-class GeneroListCreateApiView(ListCreateAPIView):
-    queryset = GeneroModel.objects.all()
+class GeneroListCreateApiView(ListCreateAPIView): 
+    queryset = GeneroModel.objects.all() 
     serializer_class = GeneroModelSerializer
+
 
 
 # View antiga baseada em função para listar e criar
@@ -69,7 +70,3 @@ def genero_detalhe_view(request, pk):
         genero.save()
         return JsonResponse({'id': genero.id, 'nome': genero.nome}, status=201)
     
-
-class AtorListCreateApiView(ListCreateAPIView):
-    queryset = AtorModel.objects.all()
-    serializer_class = AtorModelSerializer

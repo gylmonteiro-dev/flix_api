@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import GeneroModel, AtorModel
+from .models import GeneroModel
 
 
 class GeneroModelSerializer(serializers.ModelSerializer):
@@ -9,8 +9,3 @@ class GeneroModelSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-class AtorModelSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = AtorModel
-        fields = ['nome', 'idade']
