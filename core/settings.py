@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     # Aplicativos do projetos
     'generos',
     'atores',
+    'filmes',
+    'avaliacoes',
 ]
 
 MIDDLEWARE = [
