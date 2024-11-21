@@ -6,7 +6,7 @@ from .serializers import FilmeModelSerializer, FilmeSerializer
 
 class FilmeListCreate(ListCreateAPIView):
     queryset = Filme.objects.all()
-    serializer_class = FilmeSerializer
+    serializer_class = FilmeModelSerializer
 
 
 class FilmeRetrieveUpdateDestroy(RetrieveUpdateDestroyAPIView):
