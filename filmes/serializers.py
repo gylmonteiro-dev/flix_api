@@ -31,6 +31,10 @@ class  FilmeModelSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Daqui você não passa, tem que ser um ano maior que 2000")
         return value
     
+    '''
+    Desafio. Criar o validador deste serializer de forma combinada. 
+    A ideia é de validar o ano de lançamento e dos atores que não sejam inferiores a 1995
+    '''
     def validate(self, dataset):
         print(dataset)
         ano_lancamento_filme = dataset['ano_de_lancamento']
