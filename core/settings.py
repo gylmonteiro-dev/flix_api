@@ -32,20 +32,21 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # Aplicativos que são dependencias do projeto
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'rest_framework',
-    'rest_framework_simplejwt',
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "rest_framework",
+    "rest_framework_simplejwt",
 
     # Aplicativos do projetos
-    'generos',
-    'atores',
-    'filmes',
-    'avaliacoes',
+    "generos",
+    "atores",
+    "filmes",
+    "avaliacoes",
+    "autenticacao",
 ]
 
 MIDDLEWARE = [
